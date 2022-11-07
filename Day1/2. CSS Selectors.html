@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. CSS Selectors</title>
+
+<style>
+p {
+    text-align: center;
+    color: red;
+}
+/* 단순 선택자 = 해당 태그 전체 적용 */
+
+body h2{
+    background-color: yellow;
+}
+/* 하위 선택자 = body 태그안에 있는 모든 h2태그의 스타일 지정 = 태그 아래있는 지정한 태그를 적용 */
+
+/* =======================================================================================  */
+a:link {
+  color: red;
+}
+/* 방문하지 않는 링크 */
+
+a:visited {
+  color: green;
+}
+/* 방문한 링크 */
+
+a:hover {
+  color: hotpink;
+}
+/* 마우스위에 올려놓음 */
+
+a:active {
+  color: blue;
+}
+/* 마우스 클릭시 */
+
+/* 의사 클래스 선택자 = 마우스을 놓을떄, 방문한 링크, 미방문링크 구분에 사용 */
+/* =======================================================================================  */
+
+h4::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+/* 의사 요소 선택자 = 태그의 첫글자 또는 줄스타일 지정 / 요소의 내용 앞이나 뒤에 삽입 
+    ::은 의사 클래스와 요소의 구분으로 사용 (:는 클래스, ::는 요소)*/
+
+    div[id ="target"] {
+        border: 5px solid yellow;
+}
+/* 속성 선택자 = 특정 속성의 값 or 요소들을 지정하여 특정부분만 스타일  */
+</style>
+</head>
+
+<body>
+    <h1> Simple selectors (select elements based on name, id, class)</h1>
+    <!-- 단순  Selectors-->
+
+    <h2>Combinator selectors (select elements based on a specific relationship between them)</h2>
+    <!-- 결합  Selectors-->
+
+    <p><a href=https://www.w3schools.com/css/default.asp target="_blank">Pseudo-class selectors (select elements based on a certain state)</a></p>
+    <!-- 유사 클래스  Selectors-->
+
+    <h4>Pseudo-elements selectors 
+        (select and style a part of an element)</h4>
+    <!-- 유사 요소  Selectors-->
+
+    <h5><div id="target">Attribute selectors</div>(select elements based on an attribute or attribute value)</h5>
+    <!-- 속성 Selectors-->
+</body>
+
+</html>
